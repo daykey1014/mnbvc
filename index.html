@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>torealko</title>
+</head>
+<body>
+  <header>
+    <h1></h1>
+  </header>
+  <main>
+    <section id="password-section">
+      <h2>질문에 대한 답을 입력하세요:</h2>
+      <label for="q1">고진형의 생일은?(숫자로 4글자)</label>
+      <input type="text" id="q1" maxlength="4"><br>
+      <label for="q2">올해 3월 모의고사 시행일은?</label>
+      <input type="text" id="q2" maxlength="4"><br>
+      <label for="q3">우리의 졸업연도는?</label>
+      <input type="text" id="q3" maxlength="4"><br>
+      <button id="password-button">입력</button>
+    </section>
+    <section id="greeting-section" style="display:none">
+      <h2>진형 생일 축하해</h2>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 by 문과1등</p>
+  </footer>
+  <script>
+    // 정답
+    const answers = ['0323', '0323', '2025'];
+    // 비밀번호 입력 버튼
+    const passwordButton = document.getElementById('password-button');
+    // 답 입력 input
+    const q1Input = document.getElementById('q1');
+    const q2Input = document.getElementById('q2');
+    const q3Input = document.getElementById('q3');
+    // 질문 입력 섹션
+    const passwordSection = document.getElementById('password-section');
+    // 축하 메시지 섹션
+    const greetingSection = document.getElementById('greeting-section');
+
+    // 정답과 답을 비교하여 축하 메시지를 보여줄지 여부를 결정하는 함수
+    function checkAnswers() {
+      const q1 = q1Input.value.trim();
+      const q2 = q2Input.value.trim();
+      const q3 = q3Input.value.trim();
+      if (q1 === answers[0] && q2 === answers[1] && q3 === answers[2]) {
+        // 모든 답이 일치하는 경우 축하 메시지를 보여줌
+        greetingSection.style.display = 'block';
+        passwordSection.style.display = 'none';
+      } else {
+        alert('답이 일치하지 않습니다.');
+      }
+    }
+
+    // 비밀번호 입력 버튼을 눌렀을 때 답을 확인하고 축하 메시지를 보여주는 이벤트 핸들러
+    passwordButton.addEventListener('click', () => {
+      checkAnswers();
+    });
+
+    // 페이지 로드 시 첫번째 답 입력란에 포커스를 줌
+    window.onload = function() {
+      q1Input.focus();
+    }
+  </script>
+</body>
+</html>
