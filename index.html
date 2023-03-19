@@ -11,33 +11,39 @@
   <main>
     <section id="password-section">
       <h2>질문에 대한 답을 입력하세요:</h2>
-      <label for="q1">고진형의 생일은?(숫자로 4글자)</label>
-      <input type="text" id="q1" maxlength="4"><br>
-      <label for="q2">올해 3월 모의고사 시행일은?</label>
-      <input type="text" id="q2" maxlength="4"><br>
-      <label for="q3">우리의 졸업연도는?</label>
-      <input type="text" id="q3" maxlength="4"><br>
+      <div>
+        <label for="q1">이걸 만든사람의 이름은?(3글자)</label>
+        <input type="text" id="q1" maxlength="3">
+      </div>
+      <div>
+        <label for="q2">우리가 1학년 오픈랩 실험에서 했던 실험 주제는?(4글자)</label>
+        <input type="text" id="q2" maxlength="4">
+      </div>
+      <div>
+        <label for="q3">우리가 같이 봤던 영화 이름은?(2글자)</label>
+        <input type="text" id="q3" maxlength="2">
+      </div>
+      <div>
+        <label for="q4">맨시티 유나이티드의 챔피언스리그 우승 횟수는?(1글자)</label>
+        <input type="text" id="q4" maxlength="1">
+      </div>
+      <div>
+        <label for="q5">우리가 수능을 보는 날짜는 11월 몇일인가?(2글자)</label>
+        <input type="text" id="q5" maxlength="2">
+      </div>
+      <div>
+        <label for="q6">대기고에서 '대기'의 영어명은?(답6글자)</label>
+        <input type="text" id="q6" maxlength="6">
+      </div>
+      <div>
+        <label for="q7">고진형의 생일은?(4글자)</label>
+        <input type="text" id="q7" maxlength="4">
+      </div>
       <button id="password-button">입력</button>
     </section>
     <section id="greeting-section" style="display:none">
-      <h2>진형 생일 축하해. 걍 재미로 이런거 간단하게 만들어 봤는데 괜찮을지 모르겠네. 
-        내일(?) 모의고사 보는 거 잘보고, 어차피 모의고사가 딱히 중요한 거는 아니니깐 별로 신경 안써도 될듯?
-        너는 나 생일 선물 준다고 말만 하고 신경도 안쓰지만 나는 줄게
-        나도 뭐 줄건 없어서 남는 문상 같은거나 몇개 갖다줄려고
-        너랑 나는 뭐 성격, 취향같은 것도 많이 다르긴한데
-        나는 너가 이제까지 학교에서 만났던 친구 중에서는 가장 마음에 드는 것 같애.
-        내다 1학년때 시험기간때 마다 약간 히스테릭을 부렸던거 같기도 하고, 내가 이상하게 굴었던거는 다 시험 스트레스 때문이니깐 이해해줘ㅋㅋㅋ
-        원래 나는 1학년때 학교 들어오면 뭐랄까 그 공부 잘하는 친구들을 사귀어야 한다 그런 말을 유튜브 같은데에 봤던거 같은데
-        그때는 너가 원래 중학교때 공부 좀 쳤던 얘라길래 너 한테 앞으로 도움을 받아야 겠다고 생각했는데 
-        사실 오픈랩 실험할 때 너가 막 과학고 학생 마냥 실험 ㅈㄴ게 잘할 줄 알았는데 아니어서 좀 실망하긴 했는데ㅋㅎㅋ
-        나는 원래 멍청하거나 저질스러운 얘들 별로 안 좋아하거든 그냥 딱히 시간낭비 하고 싶지도 않고.
-        너는 정말 머리도 좋고 착하고 너가 정말 지금도 그렇고 나중애도 충분히 잘 될 수 있을 만한 사람이라고 생각해.
-        1학년때 내신이 생각대로 잘 안 나온거 같아서 안타깝지만, 너가 충분히 더 잘할 수 있을꺼라고 생각해
-        공부에 진짜 진심으로 열심히 한다면 잘 나올꺼야. 솔직히 너가 나보다 머리가 더 좋은것 같은데
-        그리고 나 이과반 갔어야 하는데 문과반 가니깐 친구할 만한 얘들이 너무없다. 너가 학교 비교과 활동 할때마다 좀 도와줘
-        사실 내가 너한테 과학활동이나 그런거 할때 도움받고자 좀 잘보이려고 하는 거니까는 이해해주셈
-        나는 원래 생일 같은거는 의미 없다고 생각하는 사람인데 너는 아닐 수 있겠지? 생일축하합니다요
-        .</h2>
+      <h2>축하합니다!</h2>
+      <p>당신은 진정한 toreal님이군요!</p>
     </section>
   </main>
   <footer>
@@ -45,41 +51,49 @@
   </footer>
   <script>
     // 정답
-    const answers = ['0323', '0323', '2025'];
+    const answers = ['김형언', '진자운동', '헌트', '0', '14', 'daykey', '0323'];
     // 비밀번호 입력 버튼
     const passwordButton = document.getElementById('password-button');
     // 답 입력 input
     const q1Input = document.getElementById('q1');
     const q2Input = document.getElementById('q2');
     const q3Input = document.getElementById('q3');
+    const q4Input = document.getElementById('q4');
+    const q5Input = document.getElementById('q5');
+    const q6Input = document.getElementById('q6');
+    const q7Input = document.getElementById('q7');
     // 질문 입력 섹션
-    const passwordSection = document.getElementById('password-section');
-    // 축하 메시지 섹션
-    const greetingSection = document.getElementById('greeting-section');
-
-    // 정답과 답을 비교하여 축하 메시지를 보여줄지 여부를 결정하는 함수
-    function checkAnswers() {
-      const q1 = q1Input.value.trim();
-      const q2 = q2Input.value.trim();
-      const q3 = q3Input.value.trim();
-      if (q1 === answers[0] && q2 === answers[1] && q3 === answers[2]) {
-        // 모든 답이 일치하는 경우 축하 메시지를 보여줌
-        greetingSection.style.display = 'block';
-        passwordSection.style.display = 'none';
-      } else {
-        alert('답이 일치하지 않습니다.');
-      }
-    }
-
+    const password-button = document.getElementById('password-button');
     // 비밀번호 입력 버튼을 눌렀을 때 답을 확인하고 축하 메시지를 보여주는 이벤트 핸들러
-    passwordButton.addEventListener('click', () => {
-      checkAnswers();
-    });
+passwordButton.addEventListener('click', function() {
+// 입력된 답과 정답 비교
+const q1 = q1Input.value.trim().toLowerCase();
+const q2 = q2Input.value.trim().toLowerCase();
+const q3 = q3Input.value.trim().toLowerCase();
+if (q1 === answers[0]) {
+// 첫 번째 질문의 정답이 맞으면 두 번째 질문으로 이동
+q1Input.disabled = true;
+q2Input.disabled = false;
+q2Input.focus();
+q1Input.style.display = 'none';
+q2Input.style.display = 'block';
+} else if (q2 === answers[1]) {
+// 두 번째 질문의 정답이 맞으면 세 번째 질문으로 이동
+q2Input.disabled = true;
+q3Input.disabled = false;
+q3Input.focus();
+q2Input.style.display = 'none';
+q3Input.style.display = 'block';
+} else if (q3 === answers[2]) {
+// 세 번째 질문의 정답이 맞으면 축하 메시지를 보여줌
+greetingSection.style.display = 'block';
+passwordSection.style.display = 'none';
+} else {
+// 정답이 틀렸을 경우 알림 메시지를 보여줌
+alert('답이 일치하지 않습니다. 다시 입력해주세요.');
+}
+});
+</script>
 
-    // 페이지 로드 시 첫번째 답 입력란에 포커스를 줌
-    window.onload = function() {
-      q1Input.focus();
-    }
-  </script>
 </body>
 </html>
